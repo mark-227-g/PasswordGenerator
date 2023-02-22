@@ -1,9 +1,15 @@
+/************************************** 
+Default page style  
+**************************************/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
+/************************************** 
+Default style for
+html, body, wrapper
+**************************************/
 html,
 body,
 .wrapper {
@@ -23,13 +29,19 @@ body {
   padding-right: 20px;
 }
 
+/************************************** 
+Set header style 
+**************************************/ 
 header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
   color: hsl(206, 17%, 28%);
 }
-
+/************************************** 
+Set card style for class
+.card
+**************************************/
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -40,8 +52,12 @@ header {
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
+  visibility: hidden;
 }
-
+/************************************** 
+Set card header style for class
+.card-header
+**************************************/
 .card-header::after {
   content: " ";
   display: block;
@@ -49,11 +65,17 @@ header {
   background: #e7e9eb;
   height: 2px;
 }
-
+/************************************** 
+Set card body style for class
+.card-body
+**************************************/
 .card-body {
   min-height: 100px;
 }
-
+/************************************** 
+Set card footer style for class
+.card-footer
+**************************************/
 .card-footer {
   text-align: center;
 }
@@ -71,7 +93,10 @@ header {
   display: block;
   clear: both;
 }
-
+/************************************** 
+Set button style for class
+.btn
+**************************************/
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -96,7 +121,24 @@ button[disabled] {
 .float-right {
   float: right;
 }
-
+/************************************** 
+Set style for text
+label 
+**************************************/
+label {
+  font-size: 1.2rem
+}
+/************************************** 
+Set style for text
+#inputLen 
+**************************************/
+#inputLen {
+  font-size: 1.2rem;
+}
+/************************************** 
+Set style for text
+#password 
+**************************************/
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -118,6 +160,10 @@ button[disabled] {
   overflow: hidden;
 }
 
+/************************************** 
+set media settings for  
+.btn, #password, #inputLen
+**************************************/ 
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
@@ -125,9 +171,12 @@ button[disabled] {
     padding: 10px 15px;
   }
 
-  #password {
+  #password,
+  inputLen,
+  label {
     font-size: 1rem;
   }
+
 }
 
 @media (max-width: 500px) {

@@ -5,14 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <!-- Generator Start -->
     <div class="wrapper">
       <header>
         <h1>Password Generator</h1>
       </header>
-      <div class="card">
+      <div class="card-footer">
+        <button id="startBtn" class="btn">Start</button>
+        <button id="resetBtn" class="btn">Reset</button>
+      </div>
+      <!-- Card Length Question -->
+      <div class="card" id="lenCard">
+        <div class="card-header">
+          <h2>Password Length</h2>
+          <h3>Must be between 8 and 128.</h3>
+        </div>
+        <div class="card-body">
+            <input type="text" id="inputLen" placeholder="Password Length"/>
+            <div id="msgLen"></div>
+        </div>
+        <div class="card-footer">
+          <button id="lenBtn" class="btn">Next</button>
+        </div>
+      </div>
+      <!-- Card Include Characters Question -->
+      <div class="card" id="charCard">
+        <div class="card-header">
+          <h2>Characters type to include in password</h2>
+        </div>
+        <div class="card-body">
+          <div>
+            <input type="checkbox" id="includeUpper"><label for="includeUpper">Uppercase</label>
+            <input type="checkbox" id="includeLower"><label for="includeLower">Lowercase</label>
+            <input type="checkbox" id="includeNumeric"><label for="includeNumeric">Numeric</label>
+            <input type="checkbox" id="includeSpecial"><label for="includeSpecial">Special Characters</label>
+          </div>
+          <div id="msgChar"></div>
+        </div>
+        <div class="card-footer">
+          <button id="charBtn" class="btn">Next</button>
+        </div>
+      </div>
+      <!-- Card Generate Password -->   
+      <div class="card" id="genCard">
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
@@ -22,13 +60,15 @@
             id="password"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
-          ></textarea>
+          >
+          </textarea>
         </div>
         <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+          <button id="generateBtn" class="btn">Generate Password</button>
+          <button id="copyBtn" class="btn">Copy to clipboard</button>
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
